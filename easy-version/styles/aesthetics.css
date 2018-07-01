@@ -1,0 +1,56 @@
+@import url('reset.css');
+
+html {
+  font-family: arial, sans-serif;
+  font-size: small;
+}
+
+.top-bar {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+}
+
+.top-bar ul {
+  position: absolute;
+  height: auto;
+  right: 0;
+}
+
+.top-bar ul li {
+  display: inline-block;
+  margin-left: 15px;
+  color: black;
+}
+
+.top-bar ul li a {
+  font-size: 20px;
+  color: rgba(0,0,0,0.87);
+  text-decoration: none;
+}
+
+.top-bar ul li a:hover {
+  text-decoration: underline;
+}
+
+.search-area {
+  margin: 0 auto;
+  height: 40%; width: 50%;
+  border: 2px solid blue;
+  text-align: center;
+}
+
+.search-area img {
+  width: 70%;
+  height: 45%;
+  border: 2px solid red;
+}
+
+.search-area input[name="search-box"] {
+  width: 100%;
+}
+
+.search-area input[type="submit"] {
+  text-transform: capitalize;
+}
