@@ -7,25 +7,30 @@ html {
 
 .top-bar {
   width: 100%;
-  height: auto;
+  max-height: 50px;
   position: absolute;
-  top: 0;
+  top: 10px;
+  right: 30px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 30px;
 }
 
 .top-bar ul {
+  display: flex;
+  border: 2px solid red;
   position: absolute;
-  height: auto;
   right: 0;
+  align-items: center;
+  content-align: center;
 }
 
 .top-bar ul li {
   display: inline-block;
   margin-left: 15px;
-  color: black;
 }
 
 .top-bar ul li a {
-  font-size: 20px;
   color: rgba(0,0,0,0.87);
   text-decoration: none;
 }
@@ -34,23 +39,76 @@ html {
   text-decoration: underline;
 }
 
+.top-bar .google-apps-item {
+  width: 40px;
+  height: 40px;
+  background-image: url('https://ssl.gstatic.com/gb/images/i2_2ec824b0.png');
+  background-position: -275px -85px;
+  background-repeat: no-repeat;
+  opacity: 0.55;
+}
+
+.top-bar .google-apps-item:hover {
+  opacity: 0.85;
+  cursor: pointer;
+}
+
+.top-bar .signin-item {
+  width: 85px;
+  height: 30px;
+  background-color: #4387fd;
+  font-weight: bold;
+  border: 1px solid #4285f4;
+  border-radius: 2px;
+}
+
+.top-bar .signin-item a {
+  color: white;
+}
+
+.top-bar .signin-item a:hover {
+  text-decoration: none;
+}
+
 .search-area {
-  margin: 0 auto;
-  height: 40%; width: 50%;
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+  margin: auto;
+  height: 25%; width: 25%;
   border: 2px solid blue;
   text-align: center;
 }
 
 .search-area img {
-  width: 70%;
-  height: 45%;
+  width: 90%;
+  height: 50%;
   border: 2px solid red;
 }
 
 .search-area input[name="search-box"] {
   width: 100%;
+  font-size: 15px;
 }
 
 .search-area input[type="submit"] {
   text-transform: capitalize;
+}
+
+.google-apps-grid {
+  display: none;
+  max-width: 600px;
+  max-height: 800px;
+  grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+/*  grid-template-areas:
+  "a b c"
+  "d e f"
+  "g h i"
+  "j k l"; */
+  justify-content: space-around;
+  border: 2px solid red;
+}
+
+.google-apps-grid div {
+  border: 2px solid red;
+  display: inline-block;
 }
