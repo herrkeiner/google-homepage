@@ -39,18 +39,23 @@ html {
   text-decoration: underline;
 }
 
-.top-bar .google-apps-item {
+.top-bar .google-apps-menu {
   position: relative;
   width: 40px;
   height: 40px;
+}
+
+.top-bar .google-apps-menu span {
+  display: block;
+  width: 40px; height: 40px;
   background-image: url('https://ssl.gstatic.com/gb/images/i2_2ec824b0.png');
   background-position: -275px -85px;
   background-repeat: no-repeat;
-  opacity: 0.55;
+  opacity: .65;
 }
 
-.top-bar .google-apps-item:hover {
-  opacity: 0.85;
+.top-bar .google-apps-menu span:hover {
+  opacity: .85;
   cursor: pointer;
 }
 
@@ -91,11 +96,11 @@ html {
 }
 
 .app-items-grid {
+  position: relative;
   width: 64px; height: 70px;
   background-image: url('../images/items.png');
   background-size: 64px 2479px;
   text-align: center;
-  line-height: 128px;
   border: 1px solid rgba(0,0,0,0);
 }
 
@@ -104,6 +109,7 @@ div.app-items-grid:hover {
 }
 
 div.app-items-grid a {
+  height: 100%;
   box-sizing: border-box;
   display: block;
   position: relative;
