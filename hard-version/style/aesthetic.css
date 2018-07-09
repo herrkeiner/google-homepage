@@ -1,0 +1,12 @@
+@import url('reset.css');
+
+* {
+  font-family: arial, sans-serif;
+  font-size: small;
+}
+
+.topbar {
+  height: 125px;
+  background-color: #fafafa;
+  border-bottom: 1px solid #ebebeb;
+}
