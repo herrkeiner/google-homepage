@@ -14,6 +14,7 @@
         } else {
           x.style.display = "none";
           document.getElementById('moreBtn').style.display = 'block';
+          document.getElementById('apps-section').style.overflowY = 'hidden';
         }
       }
       function showMore() {
@@ -21,6 +22,7 @@
 
         if (moreBtn.style.display === 'block') {
           moreBtn.style.display = 'none';
+          document.getElementById('apps-section').style.overflowY = 'scroll';
         }
       }
     </script>
@@ -87,7 +89,7 @@
             </div>
             <div id="moreBtn" class="gas-footer" onclick='showMore()'><p>More</p></div>
             <hr class="horizontal-line">
-            <div class="google-apps-grid">
+            <div class="more-google-apps-grid">
               <div class="app-items-grid" style="background-position: 0 -690px">
                 <label>Shopping</label>
                 <a href="http://www.google.com.br/shopping?hl=en&tab=wf"></a>
@@ -117,6 +119,7 @@
                 <a href="https://earth.google.com/web/"></a>
               </div>
             </div>
+            <a class="even-more-google" href="https://www.google.com.br/intl/en/options/">Even more from Google</a>
           </div>
         </li>
         <li class="signin-item"><a href="https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com.br/">Sign in</a></li>

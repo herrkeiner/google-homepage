@@ -46,7 +46,7 @@ html {
 .top-bar .google-apps-menu span {
   display: block;
   width: 40px; height: 40px;
-  background-image: url('https://ssl.gstatic.com/gb/images/i2_2ec824b0.png');
+  background-image: url('../images/topbar-icon.png');
   background-position: -275px -85px;
   background-repeat: no-repeat;
   opacity: .65;
@@ -88,10 +88,8 @@ html {
 .app-items-grid label {
   position: absolute;
   z-index: -1;
-
   bottom:0;
   line-height: 15px;
-
   left: 0; right: 0;
 }
 
@@ -120,12 +118,26 @@ div.app-items-grid a {
 
 .horizontal-line {
   width: 200px;
-  margin: 50px auto;
+  margin: 30px auto;
+}
+
+.more-google-apps-grid {
+  position: relative;
+  display: grid;
+  width: 240px;
+  margin: 20px 30px;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  grid-row-gap: 15px;
 }
 
 #keepItem {
-  background-image: url('../images/keep-ico1.png');
+  background-image: url('../images/keep-ico.png');
+  background-size: 64px 64px;
+}
 
+.even-more-google {
+  display: block;
+  font-size: 15px;
 }
 
 .top-bar .signin-item {
@@ -149,18 +161,13 @@ div.app-items-grid a {
   position: absolute;
   top: 0; bottom: 0; left: 0; right: 0;
   margin: auto;
-  height: 400px; width: 400px;
+  height: 400px; width: 500px;
   text-align: center;
-}
-
-.search-area img {
-  margin: 0 auto;
-  width: 272px;
 }
 
 .search-area input[name='q'] {
   padding: 10px 20px;
-  width: 100%;
+  width: 80%;
   height: 30px;
   font-size: 15px;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
