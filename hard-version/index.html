@@ -4,7 +4,26 @@
     <link href="images/icon.ico" rel="shortcut icon">
     <link href="style/aesthetic.css" type="text/css" rel="stylesheet">
     <script>
-    </script>
+          function myFunction() {
+            var x = document.getElementById("apps-section");
+
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+              document.getElementById('moreBtn').style.display = 'block';
+              document.getElementById('apps-section').style.overflowY = 'hidden';
+            }
+          }
+          function showMore() {
+            var moreBtn = document.getElementById('moreBtn');
+
+            if (moreBtn.style.display === 'block') {
+              moreBtn.style.display = 'none';
+              document.getElementById('apps-section').style.overflowY = 'scroll';
+            }
+          }
+        </script>
     <title>build this webpage - Google Search</title>
   </head>
   <body>
@@ -23,6 +42,99 @@
           </div>
         </form>
       </div>
+      </div>
+      <div class="more-signin-menu">
+        <ul>
+          <li class="google-apps-menu">
+            <span onclick="myFunction()"></span>
+            <div class="google-apps-section" id="apps-section">
+            <div class="google-apps-grid">
+              <div class="app-items-grid" style="background-position: 0 -345px">
+                <label>Apps</label>
+                <a href="https://myaccount.google.com/?utm_source=OGB&utm_medium=app"></a>
+              </div>
+              <div class="app-items-grid" style="background-position: 0 -69px">
+                <label>Search</label>
+                <a href="https://www.google.com.br/webhp?tab=ww"></a>
+              </div>
+              <div class="app-items-grid" style="background-position: 0 -1242px">
+                <label>Maps</label>
+                <a href="https://maps.google.com.br/maps?hl=en&tab=wl"></a>
+              </div>
+              <div class="app-items-grid" style="background-position: 0 -1380px">
+                <label>Youtube</label>
+                <a href="https://www.youtube.com/?gl=BR"></a>
+              </div>
+              <div class="app-items-grid" style="background-position: 0 -1104px">
+                <label>Play</label>
+                <a href="https://play.google.com/?hl=en&tab=w8"></a>
+              </div>
+              <div class="app-items-grid" style="background-position: 0 -1587px">
+                <label>Gmail</label>
+                <a href="https://mail.google.com/mail/?tab=wm"></a>
+              </div>
+              <div class="app-items-grid" style="background-position: 0 -2346px">
+                <label>Contacts</label>
+                <a href="https://www.google.com/contacts/?hl=en&tab=wC"></a>
+              </div>
+              <div class="app-items-grid" style="background-position: 0 -1794px">
+                <label>Drive</label>
+                <a href="https://drive.google.com/?tab=wo"></a>
+              </div>
+              <div class="app-items-grid" style="background-position: 0 -828px">
+                <label>Calendar</label>
+                <a href="https://www.google.com/calendar?tab=wc"></a>
+              </div>
+              <div class="app-items-grid" style="background-position: 0 -1863px">
+                <label>Google+</label>
+                <a href="https://plus.google.com/?gpsrc=ogpy0&tab=wX"></a>
+              </div>
+              <div class="app-items-grid" style="background-position: 0 -1035px">
+                <label>Translate</label>
+                <a href="https://translate.google.com.br/?hl=en&tab=wT"></a>
+              </div>
+              <div class="app-items-grid" style="background-position: 0 -138px">
+                <label>Photos</label>
+                <a href="https://photos.google.com/?tab=wq&pageId=none"></a>
+              </div>
+            </div>
+            <div id="moreBtn" class="gas-footer" onclick='showMore()'><p>More</p></div>
+            <hr class="horizontal-line">
+            <div class="google-apps-grid">
+              <div class="app-items-grid" style="background-position: 0 -690px">
+                <label>Shopping</label>
+                <a href="http://www.google.com.br/shopping?hl=en&tab=wf"></a>
+              </div>
+              <div class="app-items-grid" style="background-position: 0 -2001px">
+                <label>Docs</label>
+                <a href="https://docs.google.com/document/?usp=docs_alc"></a>
+              </div>
+              <div class="app-items-grid" style="background-position: 0 -1449px">
+                <label>Books</label>
+                <a href="https://books.google.com.br/bkshp?hl=en&tab=wp"></a>
+              </div>
+              <div class="app-items-grid" style="background-position: 0 -207px">
+                <label>Blogger</label>
+                <a href="https://www.blogger.com/?tab=wj"></a>
+              </div>
+              <div class="app-items-grid" style="background-position: 0 -966px">
+                <label>Hangouts</label>
+                <a href="https://hangouts.google.com/"></a>
+              </div>
+              <div id="keepItem" class="app-items-grid">
+                <label>Keep</label>
+                <a href="https://keep.google.com/"></a>
+              </div>
+              <div class="app-items-grid" style="background-position: 0 -2139px">
+                <label>Earth</label>
+                <a href="https://earth.google.com/web/"></a>
+              </div>
+            </div>
+            <a class="even-more-google" href="https://www.google.com.br/intl/en/options/">Even more from Google</a>
+          </div>
+          </li>
+          <li class="signin-item"><a href="https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com.br/">Sign in</a></li>
+       </ul>
       </div>
       <div class="nav-bottombar">
       </div>

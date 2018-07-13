@@ -1,6 +1,6 @@
 @import url('reset.css');
 
-html {
+* {
   font-family: arial, sans-serif;
   font-size: small;
 }
