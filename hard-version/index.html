@@ -127,7 +127,7 @@
             <li><a href="https://www.google.com.br/search?q=build+this+website&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiVvtGG0KHcAhUurVkKHZXOA10Q_AUICygC">Images</a></li>
             <li><a href="https://www.google.com.br/search?q=build+this+website&source=lnms&tbm=shop&sa=X&ved=0ahUKEwiVvtGG0KHcAhUurVkKHZXOA10Q_AUIDCgD">Shopping</a></li>
             <li><a href="https://maps.google.com.br/maps?q=build+this+website&um=1&ie=UTF-8&sa=X&ved=0ahUKEwiVvtGG0KHcAhUurVkKHZXOA10Q_AUIDSgE">Maps</a></li>
-            <li onclick="showMoreDropDown()">More
+            <li onclick="showMoreDropdown()">More
               <ul id="sfilter-mdpul">
                 <li><a href="https://www.google.com.br/search?q=build+this+website&source=lnms&tbm=nws&sa=X&ved=0ahUKEwjhr8aD5aHcAhXqp1kKHXZwCCgQ_AUIDygA">News</a></li>
                 <li><a href="https://www.google.com.br/search?q=build+this+website&source=lnms&tbm=bks&sa=X&ved=0ahUKEwjhr8aD5aHcAhXqp1kKHXZwCCgQ_AUIECgB">Books</a></li>
@@ -135,8 +135,17 @@
                 <li><a href="https://www.google.com.br/search?q=build+this+website&source=lnms&tbm=fin&sa=X&ved=0ahUKEwjhr8aD5aHcAhXqp1kKHXZwCCgQ_AUIEigD">Finance</a></li>
               </ul>
             </li>
-            <li>Settings</li>
-            <li>Tools</li>
+            <li onclick="showSettingsDropdown()">Settings
+              <ul id="sfilter-sdpul">
+                <li><a href="https://www.google.com/preferences?hl=en&prev=https://www.google.com/search?q%3Dbuild%2Bthis%2Bwebsite%26ie%3Dutf-8%26oe%3Dutf-8%26client%3Dfirefox-b-ab">Search settings</a></li>
+                <li><a href="https://www.google.com/preferences?hl=en&prev=https://www.google.com/search?q%3Dbuild%2Bthis%2Bwebsite%26ie%3Dutf-8%26oe%3Dutf-8%26client%3Dfirefox-b-ab#languages">Language</a></li>
+                <li><a href="https://www.google.com/setprefs?safeui=on&sig=0_3Jvn3gpdNOlLkmTfWBk3Rbon9rM%3D&prev=https://www.google.com/search?q%3Dbuild%2Bthis%2Bwebsite%26ie%3Dutf-8%26oe%3Dutf-8%26client%3Dfirefox-b-ab">Turn on Safesearch</a></li>
+                <li><a href="https://www.google.com/advanced_search?q=build+this+website&client=firefox-b-ab&hl=en">Advance search</a></li>
+                <li><a href="https://www.google.com/history/optout?hl=en">History</a></li>
+                <li><a href="https://support.google.com/websearch/?source=g&hl=en-BR">Search help</a></li>
+              </ul>
+            </li>
+            <li id="sfilter-tools">Tools</li>
           </ul>
         </div>
       </div>

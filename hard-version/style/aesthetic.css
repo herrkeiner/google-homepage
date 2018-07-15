@@ -275,6 +275,8 @@ div.app-items-grid a {
 
 .sfilter-bar ul li:nth-child(7) {
   margin-left: 50px;
+  position: relative;
+  cursor: pointer;
 }
 
 #sfilter-mdpul {
@@ -290,9 +292,44 @@ div.app-items-grid a {
 
 #sfilter-mdpul li {
   display: block;
-  padding: 2px 15px;
+  padding: 5px 15px;
 }
 
 #sfilter-mdpul li:hover {
   background-color: #e5e5e5;
+}
+
+#sfilter-sdpul {
+  display: none;
+  position: absolute;
+  width: 229px;
+  top: 20px;
+  left: 15px;
+  padding: 5px 0;
+  font-size: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px 1px #e5e5e5;
+}
+
+#sfilter-sdpul li {
+  display: block;
+  padding: 5px 15px;
+}
+
+#sfilter-sdpul li:hover {
+  background-color: #e5e5e5;
+}
+
+#sfilter-tools {
+  position: relative;
+  top: -12px;
+  padding: 13px 13px;
+  color: #777;
+}
+
+#sfilter-tools:hover {
+  box-sizing: border-box;
+  background-color: hsla(0, 0%, 100%, 0.16);
+	border: 1px solid #c6c6c6;
+  cursor: pointer;
 }
