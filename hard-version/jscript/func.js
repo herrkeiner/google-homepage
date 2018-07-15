@@ -18,5 +18,10 @@ function showMore() {
 }
 
 function showMoreDropDown() {
-  
+  var e = document.getElementById('sfilter-mdpul');
+
+  if (e.style.display === 'none')
+    e.style.display = 'block';
+  else e.style.display = 'none';
+
 }

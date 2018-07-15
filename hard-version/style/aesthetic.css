@@ -251,11 +251,48 @@ div.app-items-grid a {
   padding: 0 15px;
 }
 
+.sfilter-bar ul li {
+  color: #777;
+}
+
 .sfilter-bar ul li a {
-    color: black;
+    color: #777;
     text-decoration: none;
+}
+
+.sfilter-bar ul li:hover {
+    color: #000;
+}
+
+.sfilter-bar ul li a:hover {
+    color: #000;
+}
+
+.sfilter-bar ul li:nth-child(6) {
+  position: relative;
+  cursor: pointer;
 }
 
 .sfilter-bar ul li:nth-child(7) {
   margin-left: 50px;
+}
+
+#sfilter-mdpul {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  padding: 5px 0;
+  font-size: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px 1px #e5e5e5;
+}
+
+#sfilter-mdpul li {
+  display: block;
+  padding: 2px 15px;
+}
+
+#sfilter-mdpul li:hover {
+  background-color: #e5e5e5;
 }
