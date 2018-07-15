@@ -3,34 +3,14 @@
   <head>
     <link href="images/icon.ico" rel="shortcut icon">
     <link href="style/aesthetic.css" type="text/css" rel="stylesheet">
-    <script>
-          function myFunction() {
-            var x = document.getElementById("apps-section");
 
-            if (x.style.display === "none") {
-              x.style.display = "block";
-            } else {
-              x.style.display = "none";
-              document.getElementById('moreBtn').style.display = 'block';
-              document.getElementById('apps-section').style.overflowY = 'hidden';
-            }
-          }
-          function showMore() {
-            var moreBtn = document.getElementById('moreBtn');
-
-            if (moreBtn.style.display === 'block') {
-              moreBtn.style.display = 'none';
-              document.getElementById('apps-section').style.overflowY = 'scroll';
-            }
-          }
-        </script>
     <title>build this webpage - Google Search</title>
   </head>
   <body>
     <div class="navigation-bar">
       <div class="nav-topbar">
-        <a href="#">
-          <img src="images/google-logo.png" alt="Google Logo">
+        <a href="https://www.google.com">
+          <img src="images/google-logo.png" alt="Google Logo" title="Go to Google Home">
         </a>
         <div class="search-bar">
         <form action="https://google.com/search" method="get">
@@ -41,7 +21,6 @@
             <input type="submit" value="">
           </div>
         </form>
-      </div>
       </div>
       <div class="more-signin-menu">
         <ul>
@@ -99,44 +78,59 @@
               </div>
             </div>
             <div id="moreBtn" class="gas-footer" onclick='showMore()'><p>More</p></div>
-            <hr class="horizontal-line">
-            <div class="google-apps-grid">
-              <div class="app-items-grid" style="background-position: 0 -690px">
-                <label>Shopping</label>
-                <a href="http://www.google.com.br/shopping?hl=en&tab=wf"></a>
+            <div id="more-menu-section">
+              <hr class="horizontal-line">
+              <div class="more-google-apps-grid">
+                <div class="app-items-grid" style="background-position: 0 -690px">
+                  <label>Shopping</label>
+                  <a href="http://www.google.com.br/shopping?hl=en&tab=wf"></a>
+                </div>
+                <div class="app-items-grid" style="background-position: 0 -2001px">
+                  <label>Docs</label>
+                  <a href="https://docs.google.com/document/?usp=docs_alc"></a>
+                </div>
+                <div class="app-items-grid" style="background-position: 0 -1449px">
+                  <label>Books</label>
+                  <a href="https://books.google.com.br/bkshp?hl=en&tab=wp"></a>
+                </div>
+                <div class="app-items-grid" style="background-position: 0 -207px">
+                  <label>Blogger</label>
+                  <a href="https://www.blogger.com/?tab=wj"></a>
+                </div>
+                <div class="app-items-grid" style="background-position: 0 -966px">
+                  <label>Hangouts</label>
+                  <a href="https://hangouts.google.com/"></a>
+                </div>
+                <div id="keepItem" class="app-items-grid">
+                  <label>Keep</label>
+                  <a href="https://keep.google.com/"></a>
+                </div>
+                <div class="app-items-grid" style="background-position: 0 -2139px">
+                  <label>Earth</label>
+                  <a href="https://earth.google.com/web/"></a>
+                </div>
               </div>
-              <div class="app-items-grid" style="background-position: 0 -2001px">
-                <label>Docs</label>
-                <a href="https://docs.google.com/document/?usp=docs_alc"></a>
-              </div>
-              <div class="app-items-grid" style="background-position: 0 -1449px">
-                <label>Books</label>
-                <a href="https://books.google.com.br/bkshp?hl=en&tab=wp"></a>
-              </div>
-              <div class="app-items-grid" style="background-position: 0 -207px">
-                <label>Blogger</label>
-                <a href="https://www.blogger.com/?tab=wj"></a>
-              </div>
-              <div class="app-items-grid" style="background-position: 0 -966px">
-                <label>Hangouts</label>
-                <a href="https://hangouts.google.com/"></a>
-              </div>
-              <div id="keepItem" class="app-items-grid">
-                <label>Keep</label>
-                <a href="https://keep.google.com/"></a>
-              </div>
-              <div class="app-items-grid" style="background-position: 0 -2139px">
-                <label>Earth</label>
-                <a href="https://earth.google.com/web/"></a>
-              </div>
+              <a class="even-more-google" href="https://www.google.com.br/intl/en/options/">Even more from Google</a>
             </div>
-            <a class="even-more-google" href="https://www.google.com.br/intl/en/options/">Even more from Google</a>
-          </div>
+        </div>
           </li>
           <li class="signin-item"><a href="https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com.br/">Sign in</a></li>
        </ul>
       </div>
+     </div>
       <div class="nav-bottombar">
+        <div class="sfilter-bar">
+          <ul>
+            <li><a href="#">All</a></li>
+            <li><a href="https://www.google.com.br/search?q=build+this+website&source=lnms&tbm=vid&sa=X&ved=0ahUKEwiVvtGG0KHcAhUurVkKHZXOA10Q_AUICigB">Videos</a></li>
+            <li><a href="https://www.google.com.br/search?q=build+this+website&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiVvtGG0KHcAhUurVkKHZXOA10Q_AUICygC">Images</a></li>
+            <li><a href="https://www.google.com.br/search?q=build+this+website&source=lnms&tbm=shop&sa=X&ved=0ahUKEwiVvtGG0KHcAhUurVkKHZXOA10Q_AUIDCgD">Shopping</a></li>
+            <li><a href="https://maps.google.com.br/maps?q=build+this+website&um=1&ie=UTF-8&sa=X&ved=0ahUKEwiVvtGG0KHcAhUurVkKHZXOA10Q_AUIDSgE">Maps</a></li>
+            <li onclick="showMoreDropDown()">More</li>
+            <li>Settings</li>
+            <li>Tools</li>
+          </ul>
+        </div>
       </div>
     </div>
     <script src="jscript/func.js" type="text/javascript"></script>
