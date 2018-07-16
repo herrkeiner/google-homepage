@@ -6,7 +6,6 @@
 }
 
 .navigation-bar {
-  height: 125px;
   background-color: #fafafa;
   border-bottom: 1px solid #ebebeb;
 }
@@ -237,6 +236,7 @@ div.app-items-grid a {
   cursor: default;
 }
 
+/* The filter bar */
 .sfilter-bar {
   margin-left: 145px;
 }
@@ -244,7 +244,7 @@ div.app-items-grid a {
 .sfilter-bar ul {
   display: flex;
   flex-direction: row;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .sfilter-bar ul li {
@@ -266,6 +266,10 @@ div.app-items-grid a {
 
 .sfilter-bar ul li a:hover {
     color: #000;
+}
+
+#sfilter-allbtn  {
+  border-bottom: 3px solid #1A73E8;
 }
 
 .sfilter-bar ul li:nth-child(6) {
@@ -322,9 +326,10 @@ div.app-items-grid a {
 
 #sfilter-tools {
   position: relative;
-  top: -12px;
+  top: -13px;
   padding: 13px 13px;
   color: #777;
+  border: 1px solid transparent;
 }
 
 #sfilter-tools:hover {
@@ -332,4 +337,8 @@ div.app-items-grid a {
   background-color: hsla(0, 0%, 100%, 0.16);
 	border: 1px solid #c6c6c6;
   cursor: pointer;
+}
+
+#search-filter-options {
+  
 }
