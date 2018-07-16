@@ -42,3 +42,15 @@ function showSettingsDropdown() {
   else e.style.display = 'none';
 
 }
+
+function showSFOItems() {
+  var e = document.getElementById('sfo-items-atc'),
+      s = document.getElementById('sfo-items-ar');
+
+    //  if (s.style.display === 'block')
+      //  s.style.display = 'none';
+
+      if (e.style.display === 'none')
+        e.style.display = 'block';
+      else e.style.display = 'none';
+}

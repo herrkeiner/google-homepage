@@ -340,5 +340,41 @@ div.app-items-grid a {
 }
 
 #search-filter-options {
-  
+  margin-left: 145px;
+  position: absolute;
+  top:140px;
+  z-index:1;
+  color: #777;
+}
+
+#search-filter-options ul li:hover {
+  color: black;
+}
+
+.sfo-items li {
+  display: inline-block;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.sfo-atc {
+  display: none;
+  position: absolute;
+  top: 17px;
+  width: 175px;
+  background-color: white;
+  padding: 5px 0;
+  border: 1px solid #d6d6d6;
+  box-shadow: 0 0 4px 1px rgba(0,0,0,.16);
+}
+.sfo-atc li {
+  display: block;
+  padding: 5px 30px;
+
+  color: #777;
+}
+
+.sfo-atc li:hover {
+  color: #777 !important;
+  background-color: #f1f1f1;
 }

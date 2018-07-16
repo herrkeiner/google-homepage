@@ -149,8 +149,18 @@
       </div>
     </div>
     <div id="search-filter-options">
-      <ul class="">
-        <li>Any time</li>
+      <ul class="sfo-items">
+        <li onclick="showSFOItems()">Any time
+          <ul class="sfo-atc" id="sfo-items-atc">
+            <li>Any time</li>
+            <li>Past hour</li>
+            <li>Past 24 hours</li>
+            <li>Past week</li>
+            <li>Past month</li>
+            <li>Past year</li>
+            <li>Custom range...</li>
+          </ul>
+        </li>
         <li>All results</li>
       </ul>
     </div>
