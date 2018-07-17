@@ -1,7 +1,8 @@
 function myFunction() {
-  var x = document.getElementById("apps-section");
+  var x = document.getElementById("apps-section"),
+      style = window.getComputedStyle(x);
 
-  if (x.style.display === "none")
+  if (style.getPropertyValue('display') === "none")
     x.style.display = "block";
   else {
     x.style.display = "none";
@@ -19,12 +20,14 @@ function showMore() {
 
 function showMoreDropdown() {
   var e = document.getElementById('sfilter-mdpul'),
-      s = document.getElementById('sfilter-sdpul');
+      style = window.getComputedStyle(e),
+      s = document.getElementById('sfilter-sdpul'),
+      sdStyle = window.getComputedStyle(s);
 
-  if (s.style.display === 'block')
+  if (sdStyle.getPropertyValue('display') === 'block')
     s.style.display = 'none';
 
-  if (e.style.display === 'none')
+  if (style.getPropertyValue('display') === 'none')
     e.style.display = 'block';
   else e.style.display = 'none';
 
@@ -32,25 +35,44 @@ function showMoreDropdown() {
 
 function showSettingsDropdown() {
   var e = document.getElementById('sfilter-sdpul'),
-      m = document.getElementById('sfilter-mdpul');
+      style = window.getComputedStyle(e),
+      m = document.getElementById('sfilter-mdpul'),
+      mdStyle = window.getComputedStyle(m);
 
-  if (m.style.display === 'block')
+  if (mdStyle.getPropertyValue('display') === 'block')
     m.style.display = 'none';
 
-  if (e.style.display === 'none')
+  if (style.getPropertyValue('display') === 'none')
     e.style.display = 'block';
   else e.style.display = 'none';
 
 }
 
+function showSFOList() {
+  var e = document.getElementById('search-filter-options');
+      style = window.getComputedStyle(e);
+
+  if (style.getPropertyValue('display') === 'none') {
+    // display...
+    e.style.display = 'block';
+    e.style.top = '140px';
+  } else {
+    // hide
+    e.style.display = 'none';
+    e.style.top = '110px';
+  }
+
+}
+
 function showSFOItems() {
   var e = document.getElementById('sfo-items-atc'),
+      style = window.getComputedStyle(e),
       s = document.getElementById('sfo-items-ar');
 
     //  if (s.style.display === 'block')
       //  s.style.display = 'none';
 
-      if (e.style.display === 'none')
+      if (style.getPropertyValue('display') === 'none')
         e.style.display = 'block';
       else e.style.display = 'none';
 }

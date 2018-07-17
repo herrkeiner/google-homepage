@@ -342,13 +342,9 @@ div.app-items-grid a {
 #search-filter-options {
   margin-left: 145px;
   position: absolute;
-  top:140px;
-  z-index:1;
+  top: 120px;
   color: #777;
-}
-
-#search-filter-options ul li:hover {
-  color: black;
+  display: none;
 }
 
 .sfo-items li {
