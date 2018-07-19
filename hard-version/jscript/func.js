@@ -49,17 +49,23 @@ function showSettingsDropdown() {
 }
 
 function showSFOList() {
-  var e = document.getElementById('search-filter-options');
+  var e = document.getElementById('search-filter-options'),
       style = window.getComputedStyle(e);
 
-  if (style.getPropertyValue('display') === 'none') {
+  if (style.getPropertyValue('opacity') === '0') {
     // display...
-    e.style.display = 'block';
+    e.style.opacity = '1';
     e.style.top = '140px';
+    e.style.visibility = 'visible';
   } else {
-    // hide
-    e.style.display = 'none';
-    e.style.top = '110px';
+    // Close the sfo-items-atc if it is displayed.
+    var sfoAI = document.getElementById('sfo-items-atc');
+    if (window.getComputedStyle(sfoAI).getPropertyValue('display') === 'block')
+      sfoAI.style.display = 'none';
+
+    e.style.opacity ='0';
+    e.style.top = '115px';
+    e.style.visibility = 'hidden';
   }
 
 }

@@ -344,7 +344,8 @@ div.app-items-grid a {
   position: absolute;
   top: 120px;
   color: #777;
-  display: none;
+  transition: all 125ms linear;
+  opacity: 0;
 }
 
 .sfo-items li {
@@ -356,13 +357,18 @@ div.app-items-grid a {
 .sfo-atc {
   display: none;
   position: absolute;
-  top: 17px;
-  width: 175px;
+  top: 19px;
+  width: 195px;
   background-color: white;
   padding: 5px 0;
   border: 1px solid #d6d6d6;
   box-shadow: 0 0 4px 1px rgba(0,0,0,.16);
 }
+
+#sfo-items-atc + li {
+  position: relative;
+}
+
 .sfo-atc li {
   display: block;
   padding: 5px 30px;
@@ -373,4 +379,29 @@ div.app-items-grid a {
 .sfo-atc li:hover {
   color: #777 !important;
   background-color: #f1f1f1;
+}
+
+/* Nike icon */
+
+#checked-icon {
+  position: absolute;
+  left: 15px;
+  top: 12px;
+}
+
+.major-trace-icon {
+  position: absolute;
+  width: 0px; height: 10px;
+  border: 2px solid #666;
+  transform: rotate(0.125turn);
+  left: 2px;
+}
+
+.minor-trace-icon {
+  position: absolute;
+  width: 0; height: 5px;
+  top: 4px;
+  left: -4px;
+  transform: rotate(0.875turn);
+  border: 2px solid #666;
 }
