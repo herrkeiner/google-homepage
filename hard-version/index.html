@@ -165,12 +165,22 @@
             <li>Past week</li>
             <li>Past month</li>
             <li>Past year</li>
-            <li>Custom range...</li>
+            <li onclick="showCRWindow()">Custom range...</li>
           </ul>
         </li>
         <li>All results</li>
       </ul>
     </div>
+    <div id="crwindow">
+      <form action="" method="get">
+        <p>Customized date range</p>
+        <label for="cd_min">From</label>
+        <input id="cd_min" name="" type="text">
+        <br>
+        <label for="cd_max">To</label>
+        <input id="cd_max" name="" type="text">
+      </form>
+    </div>
     <script src="jscript/func.js" type="text/javascript"></script>
-  </body>
+    </body>
 </html>

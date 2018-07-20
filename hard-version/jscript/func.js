@@ -72,13 +72,17 @@ function showSFOList() {
 
 function showSFOItems() {
   var e = document.getElementById('sfo-items-atc'),
-      style = window.getComputedStyle(e),
-      s = document.getElementById('sfo-items-ar');
+  style = window.getComputedStyle(e),
+  s = document.getElementById('sfo-items-ar');
 
-    //  if (s.style.display === 'block')
-      //  s.style.display = 'none';
+//  if (s.style.display === 'block')
+  //  s.style.display = 'none';
 
-      if (style.getPropertyValue('display') === 'none')
-        e.style.display = 'block';
-      else e.style.display = 'none';
+  if (style.getPropertyValue('display') === 'none')
+    e.style.display = 'block';
+  else e.style.display = 'none';
+}
+
+function showCRWindow() {
+  
 }

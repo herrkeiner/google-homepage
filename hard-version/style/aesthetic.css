@@ -369,6 +369,15 @@ div.app-items-grid a {
   position: relative;
 }
 
+#sfo-items-atc li:nth-child(6) {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #7773;
+}
+
+#sfo-items-atc li:nth-child(7) {
+  padding: 10px 30px;
+}
+
 .sfo-atc li {
   display: block;
   padding: 5px 30px;
@@ -405,3 +414,33 @@ div.app-items-grid a {
   transform: rotate(0.875turn);
   border: 2px solid #666;
 }
+
+/* <----------------------------> */
+
+/* Custom range window */
+#crwindow {
+  position: fixed;
+  width: 300px;
+  height: 200px;
+  top: 0; bottom: 0; left: 0; right: 0;
+  margin: auto;
+  box-shadow: 0 0 10px 2px #9898984d;
+}
+
+#crwindow input[type="text"] {
+  width: 65px;
+  background-color: white;
+  border: 1px solid #c2c2c280;
+  font-size: 10px;
+  padding: 4px 2px;
+}
+
+#crwindow label {
+  font-size: 10px;
+}
+
+#crwindow label[for="cd_max"] {
+  font-weight: bold;
+}
+
+/* <------------------------------------> */
