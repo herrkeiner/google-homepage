@@ -511,4 +511,19 @@ div.app-items-grid a {
   letter-spacing: -5px;
   cursor: pointer;
 }
+
+#crwCalendar table {
+  position: relative;
+  top: 25px;
+  width: 100%;
+  margin: 0 1px;
+}
+
+#crwCalendar table tr th {
+}
+
+#crwCalendar table td {
+  text-align: center;
+  font-size: 16px;
+}
 /* <------------------------------------> */
