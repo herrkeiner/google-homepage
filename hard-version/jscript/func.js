@@ -98,6 +98,7 @@ function updateCalendarData(direction) {
   var myp = document.getElementById('crwcmyp');
   var dtCells = document.getElementById('crwcdt').children[0];
   var cDate = new Date();
+  var today = [cDate.getFullYear(), cDate.getMonth(), cDate.getDate()];
 
   cDate.setDate(1);
 
@@ -127,7 +128,36 @@ function updateCalendarData(direction) {
   }
 
   // Set cells to respective days;
-  for (var i = 1; i<7; i++) // Loop through rows
-    for (var wcell = 0; wcell < 7; wcell++, cDate.setDate(cDate.getDate() + 1))
-      dtCells.children[i].children[wcell].innerHTML = cDate.getDate();
+  for (var i = 1, cm = 0; i<7; i++) // Loop through rows
+    for (var wcell = 0, cElement = dtCells.children[i].children[wcell]; wcell < 7;
+    wcell++, cDate.setDate(cDate.getDate() + 1), cElement = dtCells.children[i].children[wcell]) {
+      // Set cells' respective days
+      cElement.innerHTML = cDate.getDate();
+
+      // If It is the first row and it is the first day of the current month
+      // then toggle cm;
+      if (i == 1 && cDate.getDate() == 1)
+        cm = 1;
+      // If it is the first day of the next month then toggle cm;
+      else if (i > 1 && cDate.getDate() == 1)
+        cm = 0;
+
+      // Check if the current cell holds a day of the current month
+      // and add/remove a class based on that condition
+      if (cm) {
+        // Is this cell holding a future day?
+        // If so, then add a specified class
+        if (cDate.getFullYear() >= today[0] && cDate.getMonth() >= today[1] && cDate.getDate() > today[2] )
+          cElement.classList.add('disabled-appearance');
+        // Okay, it is not a future day, but the cell contains the class of future days
+        // therefore we need to remove it;
+        else if (cElement.classList.contains('disabled-appearance'))
+          cElement.classList.remove('disabled-appearance');
+      } else if (!cm) {
+          if (cDate.getFullYear() >= today[0] && cDate.getMonth() >= today[1] && cDate.getDate() > today[2] )
+            cElement.classList.add('disabled-appearance'); // attention here **
+          else cElement.classList.add('disabled-appearance');
+
+      }
+    }
 }
