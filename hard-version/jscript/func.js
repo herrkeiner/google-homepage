@@ -103,12 +103,18 @@ function updateCalendarData(direction) {
 
   switch (direction) {
     case -1:
+      document.getElementById('crwcfm').classList.remove('disabled-appearance');
       monthCounter -= 1;
       cDate.setMonth(monthCounter);
       break;
     case 1:
+      // Only go forward if the computed month is
+      // less than the current month;
       if (monthCounter < cDate.getMonth()) {
         monthCounter += 1;
+        // Is monthcounter = to the current month?
+        if (monthCounter == cDate.getMonth())
+          document.getElementById('crwcfm').classList.add('disabled-appearance');
         cDate.setMonth(monthCounter);
       }
       break;
