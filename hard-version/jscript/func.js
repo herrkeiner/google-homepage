@@ -1,5 +1,7 @@
-const monthInfo = [["January", 31], ["February", 28], ["March", 31], ["April", 30], ["May", 31], ["June", 30],
-  ["July", 31], ["August", 31], ["September", 30], ["October", 31], ["November", 30], ["December", 31]
+var monthCounter = new Date();
+monthCounter = monthCounter.getMonth();
+const monthInfo = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
 ];
 
 function myFunction() {
@@ -88,12 +90,38 @@ function showSFOItems() {
 }
 
 function showCRWindow() {
+  updateCalendarData();
+}
+
+function updateCalendarData(direction) {
   // Creates object of the month and year paragraph;
-  myp = document.getElementById('crwcmyp');
-  date = new Date();
+  var myp = document.getElementById('crwcmyp');
+  var dtCells = document.getElementById('crwcdt').children[0];
+  var cDate = new Date();
 
-  myp.innerHTML = monthInfo[date.getMonth()][0] + ' ' + date.getFullYear();
+  cDate.setDate(1);
 
-  date.setDate(1);
+  switch (direction) {
+    case -1:
+      monthCounter -= 1;
+      cDate.setMonth(monthCounter);
+      break;
+    case 1:
+      if (monthCounter < cDate.getMonth()) {
+        monthCounter += 1;
+        cDate.setMonth(monthCounter);
+      }
+      break;
+  }
 
+  myp.innerHTML = monthInfo[cDate.getMonth()] + ' ' + cDate.getFullYear();
+
+  if (cDate.getDay() != 0) {
+    cDate.setDate(-(cDate.getDay()) + 1);
+  }
+
+  // Set cells to respective days;
+  for (var i = 1; i<7; i++) // Loop through rows
+    for (var wcell = 0; wcell < 7; wcell++, cDate.setDate(cDate.getDate() + 1))
+      dtCells.children[i].children[wcell].innerHTML = cDate.getDate();
 }
