@@ -520,15 +520,33 @@ div.app-items-grid a {
 }
 
 #crwCalendar table tr th {
+  user-select: none;
+  -moz-user-select: none;
 }
 
 #crwCalendar table td {
   text-align: center;
   font-size: 16px;
+  user-select: none;
+  -moz-user-select: none;
+  cursor: pointer;
 }
 
-.disabled-appearance {
+#crwCalendar table td:hover {
+  background-color: #c8c8c8;
+  border-radius: 2px;
+}
+
+.past-days-appearance {
+  color: #777 !important;
+}
+
+.future-past-month {
   color: #d9d9d9;
-  cursor: default !important;
+}
+
+.disabled-future-days-appearance {
+  color: #d9d9d9;
+  pointer-events: none;
 }
 /* <------------------------------------> */

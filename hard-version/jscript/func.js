@@ -98,7 +98,7 @@ function updateCalendarData(direction) {
   var myp = document.getElementById('crwcmyp');
   var dtCells = document.getElementById('crwcdt').children[0];
   var cDate = new Date();
-  var today = [cDate.getFullYear(), cDate.getMonth(), cDate.getDate()];
+  var today = cDate.getTime();
 
   cDate.setDate(1);
 
@@ -129,8 +129,10 @@ function updateCalendarData(direction) {
 
   // Set cells to respective days;
   for (var i = 1, cm = 0; i<7; i++) // Loop through rows
-    for (var wcell = 0, cElement = dtCells.children[i].children[wcell]; wcell < 7;
-    wcell++, cDate.setDate(cDate.getDate() + 1), cElement = dtCells.children[i].children[wcell]) {
+    for (var wcell = 0, cElement = dtCells.children[i].children[wcell];
+        wcell < 7;
+        wcell++, cDate.setDate(cDate.getDate() + 1),
+        cElement = dtCells.children[i].children[wcell]) {
       // Set cells' respective days
       cElement.innerHTML = cDate.getDate();
 
@@ -143,21 +145,55 @@ function updateCalendarData(direction) {
         cm = 0;
 
       // Check if the current cell holds a day of the current month
-      // and add/remove a class based on that condition
+      // and add/remove a class based on that criteria
       if (cm) {
+        if (cElement.classList.contains('past-days-appearance'))
+          cElement.classList.remove('past-days-appearance');
+
         // Is this cell holding a future day?
         // If so, then add a specified class
-        if (cDate.getFullYear() >= today[0] && cDate.getMonth() >= today[1] && cDate.getDate() > today[2] )
-          cElement.classList.add('disabled-appearance');
-        // Okay, it is not a future day, but the cell contains the class of future days
-        // therefore we need to remove it;
-        else if (cElement.classList.contains('disabled-appearance'))
-          cElement.classList.remove('disabled-appearance');
-      } else if (!cm) {
-          if (cDate.getFullYear() >= today[0] && cDate.getMonth() >= today[1] && cDate.getDate() > today[2] )
-            cElement.classList.add('disabled-appearance'); // attention here **
-          else cElement.classList.add('disabled-appearance');
+        if (cDate.getTime() > today) {
+          cElement.classList.add('disabled-future-days-appearance');
+          continue;
+        // Okay, it is not a future day, but does the cell contain the class of future days?
+        // if so, we need to remove it;
+        } else if (cElement.classList.contains('disabled-future-days-appearance'))
+            cElement.classList.remove('disabled-future-days-appearance');
+          else if (cElement.classList.contains('future-past-month'))
+            cElement.classList.remove('future-past-month');
+      } else {
+          if (cDate.getTime() > today)
+            cElement.classList.add('disabled-future-days-appearance');
+          else {
+            if (cElement.classList.contains('disabled-future-days-appearance'))
+              cElement.classList.remove('disabled-future-days-appearance');
 
+            // Is it a previous month of monthCounter?
+            if (i == 1) {
+              cElement.classList.add('past-days-appearance');
+            } else {
+              cElement.classList.add('future-past-month');
+            }
+
+          }
       }
     }
+}
+
+function fuck(y) {
+  /* This function is responsible for setting the input boxes data. */
+  var date = new Date();
+  // This conditional cluster figures out which date the caller element is holding;
+  if (y.classList.contains('past-days-appearance')) {
+    date.setMonth(monthCounter - 1);
+    date.setDate(Number(y.innerHTML));
+    updateCalendarData(-1);
+  } else if (y.classList.contains('future-past-month')) {
+    date.setMonth(monthCounter + 1);
+    date.setDate(Number(y.innerHTML));
+    updateCalendarData(1);
+  } else {
+    date.setMonth(monthCounter);
+    date.setDate(Number(y.innerHTML));
+  }
 }
