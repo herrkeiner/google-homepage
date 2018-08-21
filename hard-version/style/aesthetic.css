@@ -549,4 +549,13 @@ div.app-items-grid a {
   color: #d9d9d9;
   pointer-events: none;
 }
+
+/*.bgifteffect {
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  width: 68px;
+  height: 20px;
+  background-color: #f1f1f1;
+}*/
 /* <------------------------------------> */

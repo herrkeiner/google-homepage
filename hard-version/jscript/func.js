@@ -90,6 +90,7 @@ function showSFOItems() {
 }
 
 function showCRWindow() {
+  document.getElementById('cd_min').focus();
   updateCalendarData();
 }
 
@@ -180,9 +181,10 @@ function updateCalendarData(direction) {
     }
 }
 
-function fuck(y) {
-  /* This function is responsible for setting the input boxes data. */
+function insertDateRange(y) {
+  /* This function is responsible for setting the input boxes' date range. */
   var date = new Date();
+
   // This conditional cluster figures out which date the caller element is holding;
   if (y.classList.contains('past-days-appearance')) {
     date.setMonth(monthCounter - 1);
@@ -195,5 +197,16 @@ function fuck(y) {
   } else {
     date.setMonth(monthCounter);
     date.setDate(Number(y.innerHTML));
+  }
+
+  var cdMin = document.getElementById("cd_min");
+  var cdMax = document.getElementById("cd_max");
+
+  if (cdMin.value === '') {
+    cdMin.value = date.toLocaleDateString();
+    cdMax.focus();
+  } else {
+    cdMax.value = date.toLocaleDateString();
+    cdMax.focus();
   }
 }
